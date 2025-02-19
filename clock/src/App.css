@@ -1,0 +1,64 @@
+.clock-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: white;
+  color: black;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Dark Mode */
+.clock-container.dark {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Clock Box with Borders */
+.clock {
+  font-size: 2em;
+  margin-bottom: 20px;
+  padding: 60px;
+  border: 3px solid #007bff;
+  border-radius: 200px;
+  box-shadow: 0 80px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Controls Box */
+.controls {
+  display: flex;
+  gap: 10px;
+}
+
+/* Buttons Styling */
+.controls button {
+  padding: 18px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  background: linear-gradient(135deg, #b700ff, #00b37d);
+  color: white;
+  border-radius: 9px;
+  transition: transform 0.2s ease, background 0.3s;
+}
+
+/* Button Hover Effect */
+.controls button:hover {
+  background: linear-gradient(135deg, #e200e2, #04eea8);
+  transform: scale(1.05);
+}
+
+/* Smooth Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
